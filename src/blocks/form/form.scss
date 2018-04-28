@@ -34,4 +34,13 @@ $line-height:                 1.375em !default;
     line-height: $line-height;
     color: currentColor;
   }
+
+  &--feedback {
+    @include row;
+
+    .field-feedback {
+      @include col();
+      @include col(lg, 4);
+    }
+  }
 }

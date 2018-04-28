@@ -21,13 +21,15 @@ $transition-time:             0.3s !default;
 
   $block-name:                &; // #{$block-name}__element
 
-  position: relative;
+  // position: relative;
   z-index: 10;
+  overflow-x: hidden;
 
   // первый уровень
   &__list {
     margin: 0;
     padding: 0;
+    z-index: 2;
     list-style: none;
 
     // мобильный вид списка
@@ -36,14 +38,20 @@ $transition-time:             0.3s !default;
       // открытие/закрытие меню только в случае работающего JS
 
       .js & {
-        overflow: hidden;
-        max-height: 0;
-        transition: max-height 0.2s;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        // max-width: 480px;
+        padding-top: 4px;
+        background-color: #fff;
+        -webkit-transform: translateX(-101%);
+        transform: translateX(-101%);
       }
 
       .js #{$block-name}--open & {
-        max-height: 100vh;
-        transition: max-height 0.6s;
+        transform: translateX(0);
+        transition: transform 0.2s 0.2s;
       }
     }
 
@@ -63,11 +71,24 @@ $transition-time:             0.3s !default;
         color: #000;
       }
     }
+
+    @media (max-width: ($menu-desktop-width - 1)) {
+      &:not(:last-child):after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 15px;
+        right: 15px;
+        height: 1px;
+        background: $gray-lightest;
+      }
+    }
   }
 
   &__link {
     display: block;
     padding: 0.5em;
+    position: relative;
     text-decoration: none;
     background-color: #fff;
 
@@ -75,6 +96,12 @@ $transition-time:             0.3s !default;
     &:focus {
       text-decoration: none;
       background-color: $gray-lightest;
+    }
+
+    @media (max-width: ($menu-desktop-width - 1)) {
+      padding: 13px 15px;
+      font-size: 14px;
+      color: $color-main;
     }
 
     &--lvl-2 {
@@ -141,7 +168,24 @@ $transition-time:             0.3s !default;
     }
   }
 
+  &__backdrop {
 
+    @media (max-width: ($menu-desktop-width - 1)) {
+      position: fixed;
+      z-index: 1;
+      top: 80px;
+      left: 0;
+      background: rgba(0,0,0,0.65);
+      opacity: 0;
+      transition: opacity 0.3s;
+
+      #{$block-name}--open & {
+        bottom: 0;
+        right: 0;
+        opacity: 1;
+      }
+    }
+  }
 
   // переключатель
 

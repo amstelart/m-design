@@ -5,4 +5,25 @@
 .page-header {
 
   $block-name:                &; // #{$block-name}__element
+
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  padding: 20px 0;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @media (max-width: ($screen-md - 1)) {
+    .b-contacts,
+    .b-callback {
+      display: none;
+    }
+  }
 }
