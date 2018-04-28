@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>NTH start project</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png"> -->
+  <!-- <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png"> -->
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,500,500i|Lora:400,400i&amp;subset=cyrillic" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet" media="screen">
+
+  <script>
+    // Маркер работающего javascript
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    document.addEventListener('DOMContentLoaded', function(){
+      if (window.isMobile !== undefined) {
+        // console.log(isMobile);
+        if(isMobile.any) {
+          var rootClasses = ' is-mobile';
+          for (key in isMobile) {
+            if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
+            if(typeof isMobile[key] === 'object' && key !== 'other') {
+              for (type in isMobile[key]) {
+                if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
+              }
+            }
+          }
+          document.documentElement.className += rootClasses;
+        }
+      }
+      else {
+        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+      }
+    });
+
+  </script>
+
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <header class="page-header" role="banner">
+        <div class="container page-header__inner">
+          <a href="/" class="logo">
+            <img src="img/logo.png" alt="logo">
+          </a>
+          <nav id="main-nav" class="main-nav" role="navigation">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  О компании
+                </a>
+              </li>
+              <li class="main-nav__item main-nav__item--active">
+                <a href="#" class="main-nav__link">
+                  Каталог
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Оплата и доставка
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Статьи
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+            <div class="main-nav__backdrop"></div>
+          </nav>
+          <div class="b-contacts">
+            <div class="b-contacts__item">г.Курск, ул. Малых, 180</div>
+            <div class="b-contacts__item">+7(4712) 31-19-19</div>
+          </div>
+          <div class="b-callback">
+            <button class="btn btn--main">Заказать звонок</button>
+          </div>
+          <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
+        </div>
+      </header>
+
+
+      <!-- <div id="main-slider" class="slider-pro">
+        <div class="sp-slides">
+
+          <div class="sp-slide">
+            <img class="sp-image" src="../src/css/images/blank.gif" data-src="http://bqworks.com/slider-pro/images/image2_medium.jpg" data-retina="http://bqworks.com/slider-pro/images/image2_large.jpg" />
+            <div class="sp-layer sp-white sp-padding hide-medium-screen" data-width="450" data-horizontal="15%" data-vertical="22%" data-show-transition="left" data-show-delay="200" data-hide-transition="left" data-hide-delay="200">
+              <h4>Паяный витраж</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, voluptatibus. Enim laborum eum labore quae aspernatur quos non quaerat optio.</p>
+              <a class="btn" href="#">Узнать цену</a>
+            </div>
+          </div>
+
+          <div class="sp-slide">
+            <img class="sp-image" src="../src/css/images/blank.gif" data-src="http://bqworks.com/slider-pro/images/image2_medium.jpg" data-retina="http://bqworks.com/slider-pro/images/image2_large.jpg" />
+            <div class="sp-layer sp-white sp-padding hide-medium-screen" data-width="450" data-horizontal="40" data-vertical="22%" data-show-transition="left" data-show-delay="200" data-hide-transition="left" data-hide-delay="200">
+              <h4>Паяный витраж</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, voluptatibus. Enim laborum eum labore quae aspernatur quos non quaerat optio.</p>
+              <a class="btn" href="#">Узнать цену</a>
+            </div>
+          </div>
+
+        </div>
+      </div> -->
+      <main role="main">
+        <section class="main-section">
+          <div class="main-section__inner">
+            <h2 class="main-section__title"><span>Каталог</span></h2>
+            <div class="main-catalog">
+              <div class="main-catalog__item">
+                <div class="catalog-card">
+                  <a href="#">
+                    <img src="http://placehold.it/735x435/cf1836/ecf0f1" width="735" height="435" alt="">
+                    <div class="catalog-card__title">Витражи в интерьере</div>
+                  </a>
+                </div>
+              </div>
+              <div class="main-catalog__item">
+                <div class="catalog-card">
+                  <a href="#">
+                    <img src="http://lorempixel.com/735/435" width="735" height="435" alt="">
+                    <div class="catalog-card__title">Витражи в интерьере</div>
+                  </a>
+                </div>
+              </div>
+              <div class="main-catalog__item">
+                <div class="catalog-card">
+                  <a href="#">
+                    <img src="http://placehold.it/735x435/cf1836/ecf0f1" width="735" height="435" alt="">
+                    <div class="catalog-card__title">Витражи в интерьере</div>
+                  </a>
+                </div>
+              </div>
+              <div class="main-catalog__item">
+                <div class="catalog-card">
+                  <a href="#">
+                    <img src="http://lorempixel.com/735/435" width="735" height="435" alt="">
+                    <div class="catalog-card__title">Витражи в интерьере</div>
+                  </a>
+                </div>
+              </div>
+              <div class="main-catalog__item">
+                <div class="catalog-card">
+                  <a href="#">
+                    <img src="http://placehold.it/735x435/cf1836/ecf0f1" width="735" height="435" alt="">
+                    <div class="catalog-card__title">Фотоизображения для интерьера</div>
+                  </a>
+                </div>
+              </div>
+              <div class="main-catalog__item">
+                <div class="catalog-card">
+                  <a href="#">
+                    <img src="http://lorempixel.com/735/435" width="735" height="435" alt="">
+                    <div class="catalog-card__title">Фотоизображения для интерьера</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="main-section">
+          <div class="main-section__inner">
+            <h2 class="main-section__title"><span>Новинки</span></h2>
+            <div class="main-new-product">
+              <div class="product-card">
+                <div class="product-card__inner">
+                  <div class="product-card__image">
+                    <img src="http://lorempixel.com/735/435" width="735" height="435" alt="">
+                  </div>
+                  <div class="product-card__body">
+                    <h4 class="product-card__title">Название</h4>
+                    <div class="product-card__info">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+                    </div>
+                    <a class="btn btn--main btn--block" href="#">Узнать цену</a>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card__inner">
+                  <div class="product-card__image">
+                    <img src="http://lorempixel.com/735/435" width="735" height="435" alt="">
+                  </div>
+                  <div class="product-card__body">
+                    <h4 class="product-card__title">Название</h4>
+                    <div class="product-card__info">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+                    </div>
+                    <a class="btn btn--main btn--block" href="#">Узнать цену</a>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card__inner">
+                  <div class="product-card__image">
+                    <img src="http://lorempixel.com/735/435" width="735" height="435" alt="">
+                  </div>
+                  <div class="product-card__body">
+                    <h4 class="product-card__title">Название</h4>
+                    <div class="product-card__info">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+                    </div>
+                    <a class="btn btn--main btn--block" href="#">Узнать цену</a>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card__inner">
+                  <div class="product-card__image">
+                    <img src="http://lorempixel.com/735/435" width="735" height="435" alt="">
+                  </div>
+                  <div class="product-card__body">
+                    <h4 class="product-card__title">Название</h4>
+                    <div class="product-card__info">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+                    </div>
+                    <a class="btn btn--main btn--block" href="#">Узнать цену</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="main-section main-section--bg" style="background-image: url('img/main-section-bg-01.jpg');">
+          <div class="main-section__inner">
+            <h2 class="main-section__title"><span>Наши преимущества</span></h2>
+            <div class="advantage">
+              <div class="advantage__item">
+                <img src="img/adv-image-01.png" class="advantage__image" alt="">
+                <div class="advantage__caption">Изготавливаем 20 витражей в сутки</div>
+              </div>
+              <div class="advantage__item">
+                <img src="img/adv-image-02.png" class="advantage__image" alt="">
+                <div class="advantage__caption">Срок изготовления витража - в течение дня</div>
+              </div>
+              <div class="advantage__item">
+                <img src="img/adv-image-03.png" class="advantage__image" alt="">
+                <div class="advantage__caption">Безопасная транспортировка</div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="main-section">
+          <div class="main-section__inner">
+            <h2 class="main-section__title"><span>Отзывы</span></h2>
+            <div id="review-carousel" class="owl-carousel">
+              <div class="review-card">
+                <div class="review-card__user">
+                  <div class="review-card__user-image">
+                    <img src="img/review-card-user-image.jpg" alt="">
+                  </div>
+                  <div class="review-card__user-name">Анна Григорьева</div>
+                </div>
+                <div class="review-card__rating">
+                  <svg class="icon" width="24" height="24">
+                    <use xlink:href="img/sprite-svg.svg#icon-star"></use>
+                  </svg>
+                  <svg class="icon" width="24" height="24">
+                    <use xlink:href="img/sprite-svg.svg#icon-star"></use>
+                  </svg>
+                  <svg class="icon" width="24" height="24">
+                    <use xlink:href="img/sprite-svg.svg#icon-star"></use>
+                  </svg>
+                  <svg class="icon" width="24" height="24">
+                    <use xlink:href="img/sprite-svg.svg#icon-star"></use>
+                  </svg>
+                  <svg class="icon" width="24" height="24">
+                    <use xlink:href="img/sprite-svg.svg#icon-star"></use>
+                  </svg>
+                </div>
+                <div class="review-card__text">
+                  <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. </p>
+                </div>
+              </div>
+              <div class="review-card">
+                <div class="review-card__user">
+                  <div class="review-card__user-image">
+                    <img src="img/review-card-user-image.jpg" alt="">
+                  </div>
+                  <div class="review-card__user-name">Анна Григорьева</div>
+                </div>
+                <div class="review-card__rating">
+                  <svg class="icon" width="24" height="24">
+                    <use xlink:href="img/sprite-svg.svg#icon-star"></use>
+                  </svg>
+                  <svg class="icon" width="24" height="24">
+                    <use xlink:href="img/sprite-svg.svg#icon-star"></use>
+                  </svg>
+                  <svg class="icon" width="24" height="24">
+                    <use xlink:href="img/sprite-svg.svg#icon-star"></use>
+                  </svg>
+                  <svg class="icon" width="24" height="24">
+                    <use xlink:href="img/sprite-svg.svg#icon-star"></use>
+                  </svg>
+                  <svg class="icon" width="24" height="24">
+                    <use xlink:href="img/sprite-svg.svg#icon-star"></use>
+                  </svg>
+                </div>
+                <div class="review-card__text">
+                  <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+
+      <footer class="page-footer" role="contentinfo">
+        <div class="page-feedback">
+          <div class="page-feedback__inner">
+            <div class="page-feedback__header">
+              <h2 class="page-feedback__title">Остались вопросы?</h2>
+              <p class="page-feedback__caption">Для получения подробной информации звоните нам по тел.: <span>+7(4712) 31-19-19</span> или оставьте заявку</p>
+            </div>
+            <div class="page-feedback__body">
+              <form action="" class="form form--feedback">
+                <label class="field-feedback">
+                  <input class="field-feedback__input" type="text" placeholder="Имя" id="" name="">
+                </label>
+                <label class="field-feedback">
+                  <input class="field-feedback__input" type="text" placeholder="Телефон" id="" name="">
+                </label>
+                <div class="field-feedback">
+                  <button type="submit" class="btn field-feedback__btn btn--block">Оставить заявку</button>
+                </div>
+              </form>
+            </div>
+            <div class="page-feedback__footer">
+              <p>Оставляя заявку вы соглашаетесь на обработку персональных данных. <a href="#">Политика конфиденциальности</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="container page-footer__inner">
+          <a href="/" class="logo">
+            <img src="img/logo.png" alt="logo">
+          </a>
+          <nav class="main-nav" role="navigation">
+            <ul class="main-nav__list">
+              <li class="main-nav__item main-nav__item--active">
+                <a href="#" class="main-nav__link">
+                  О компании
+                </a>
+              </li>
+              <li class="main-nav__item main-nav__item--active">
+                <a href="#" class="main-nav__link">
+                  Каталог
+                </a>
+              </li>
+              <li class="main-nav__item main-nav__item--active">
+                <a href="#" class="main-nav__link">
+                  Оплата и доставка
+                </a>
+              </li>
+              <li class="main-nav__item main-nav__item--active">
+                <a href="#" class="main-nav__link">
+                  Статьи
+                </a>
+              </li>
+              <li class="main-nav__item main-nav__item--active">
+                <a href="#" class="main-nav__link">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="b-contacts">
+            <div class="b-contacts__item">г.Курск, ул. Малых, 180</div>
+            <div class="b-contacts__item">+7(4712) 31-19-19</div>
+          </div>
+          <div class="b-callback">
+            <button class="btn btn--main">Заказать звонок</button>
+          </div>
+        </div>
+        <div class="page-footer-copiryght">
+          <div class="container page-footer-copiryght__inner">
+            <span>Разработка сайта — <a href="#">Showbiz Studio</a></span>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
+  </div>
+  <script src="js/script.min.js"></script>
+
+</body>
+</html>
