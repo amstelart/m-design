@@ -89,6 +89,10 @@ $border-radius:               0;
     }
   }
 
+  &--main-lg {
+    padding: $field-padding-vertical * 1.5  $field-padding-horizontal * 1.5;
+  }
+
   &--block {
     width: 100%;
   }

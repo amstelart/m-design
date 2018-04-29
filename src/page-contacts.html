@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>NTH start project</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header.html')
+
+      <main role="main">
+        <div class="page-layout">
+          <div class="page-layout__inner">
+
+            <div class="page-layout__breadcrumbs">
+              <ul class="breadcrumbs">
+                <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
+                <li class="breadcrumbs__item"><span>Контакты</span></li>
+              </ul>
+            </div>
+
+            <div class="page-layout__main">
+              <div class="page-main">
+                <h1 class="page-heading">Контакты</h1>
+                <div class="contact-map">
+                  <div class="contact-box">
+                    <div class="contact-box__item">г.Курск, ул. Малых, 180</div>
+                    <div class="contact-box__item">+7(4712) 31-19-19</div>
+                    <div class="contact-box__item">+7-910-313-21-93</div>
+                  </div>
+                  <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0cae43c4271938308b3fd6d56f48f345c1fdf66df636606c1fe87610e31bc70c&amp;width=100%25&amp;height=420&amp;lang=ru_RU&amp;scroll=false"></script>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+</body>
+</html>

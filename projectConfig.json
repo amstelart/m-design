@@ -70,7 +70,14 @@
     "page-feedback": [],
     "field-feedback": [],
     "b-contacts": [],
-    "review-carousel": []
+    "review-carousel": [],
+    "page-layout": [],
+    "sidebar": [],
+    "page-heading": [],
+    "page-main": [],
+    "catalog": [],
+    "catalog-nav": [],
+    "contact-box": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

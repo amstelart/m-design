@@ -1,0 +1,35 @@
+// В этом файле должны быть стили для БЭМ-блока contact-box, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.contact-map {
+  position: relative;
+}
+
+.contact-box {
+
+  $block-name:                &; // #{$block-name}__element
+
+  background: #fff;
+  display: inline-block;
+  font-size: 18px;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  z-index: 2;
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (max-width: ($screen-md - 1)) {
+    position: static;
+    margin-bottom: 30px;
+    display: block;
+  }
+}

@@ -1,0 +1,44 @@
+// В этом файле должны быть стили для БЭМ-блока page-layout, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.page-layout {
+
+  $block-name:                &; // #{$block-name}__element
+
+  @include container;
+  margin-bottom: 60px;
+
+  &__inner {
+    @include row;
+  }
+
+  &__breadcrumbs {
+    padding: 20px 0;
+    @include col();
+  }
+
+  &__sidebar {
+    @include col();
+  }
+
+  &__main {
+    @include col();
+  }
+
+  .layout-with-sidebar {
+
+    #{$block-name}__sidebar {
+      @include col(lg, 3);
+    }
+
+    #{$block-name}__main {
+      @include col(lg, 9);
+    }
+  }
+
+  &__heading {
+    margin-top: 0;
+  }
+
+}
