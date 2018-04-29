@@ -20,6 +20,10 @@
     justify-content: space-between;
   }
 
+  .b-contacts {
+    margin-right: 30px;
+  }
+
   @media (max-width: ($screen-md - 1)) {
     .b-contacts,
     .b-callback {

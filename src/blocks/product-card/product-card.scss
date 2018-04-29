@@ -10,6 +10,12 @@
 
   &__inner {
     box-shadow: $shadow2;
+    transition: all $transition-time;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.59);
+    }
   }
 
   &__image {

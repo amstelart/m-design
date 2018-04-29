@@ -25,6 +25,11 @@ $transition-time:             0.3s !default;
   z-index: 10;
   overflow-x: hidden;
 
+  @media (min-width: $menu-desktop-width) {
+    flex: 1;
+    margin: 0 30px;
+  }
+
   // первый уровень
   &__list {
     margin: 0;
@@ -58,6 +63,7 @@ $transition-time:             0.3s !default;
     // настольный вид списка
     @media (min-width: $menu-desktop-width) {
       display: flex;
+      justify-content: center;
       flex-wrap: wrap;
     }
   }
@@ -97,6 +103,7 @@ $transition-time:             0.3s !default;
     &:hover,
     &:focus {
       text-decoration: none;
+      color: $color-main;
       background-color: $gray-lightest;
     }
 

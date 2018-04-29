@@ -68,7 +68,9 @@
     "advantage": [],
     "review-card": [],
     "page-feedback": [],
-    "field-feedback": []
+    "field-feedback": [],
+    "b-contacts": [],
+    "review-carousel": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
