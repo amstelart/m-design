@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Мдизайн</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,500,500i|Lora:400,400i&amp;subset=cyrillic" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet" media="screen">
+
+  <script>
+    // Маркер работающего javascript
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    document.addEventListener('DOMContentLoaded', function(){
+      if (window.isMobile !== undefined) {
+        // console.log(isMobile);
+        if(isMobile.any) {
+          var rootClasses = ' is-mobile';
+          for (key in isMobile) {
+            if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
+            if(typeof isMobile[key] === 'object' && key !== 'other') {
+              for (type in isMobile[key]) {
+                if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
+              }
+            }
+          }
+          document.documentElement.className += rootClasses;
+        }
+      }
+      else {
+        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+      }
+    });
+
+  </script>
+
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <header class="page-header" role="banner">
+        <div class="container page-header__inner">
+          <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="logo">
+          </a>
+          <nav id="main-nav" class="main-nav" role="navigation">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a href="page.html" class="main-nav__link">
+                  О компании
+                </a>
+              </li>
+              <li class="main-nav__item main-nav__item--active">
+                <a href="page-catalog.html" class="main-nav__link">
+                  Каталог
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="page.html" class="main-nav__link">
+                  Оплата и доставка
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="page.html" class="main-nav__link">
+                  Статьи
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="page-contacts.html" class="main-nav__link">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+            <div class="main-nav__backdrop"></div>
+          </nav>
+          <div class="b-contacts">
+            <div class="b-contacts__item">
+              <svg class="b-contacts__icon" width="20" height="20">
+                <use xlink:href="img/sprite-svg.svg#icon-marker"></use>
+              </svg>
+              <span>г.Курск, ул. Малых, 180</span>
+            </div>
+            <div class="b-contacts__item">
+              <svg class="b-contacts__icon" width="20" height="20">
+                <use xlink:href="img/sprite-svg.svg#icon-phone"></use>
+              </svg>
+              <span>+7(4712) 31-19-19</span>
+            </div>
+          </div>
+          <div class="b-callback">
+            <button class="btn btn--main btn--main-lg" type="button" data-toggle="modal" data-target="#modal-call">Заказать звонок</button>
+          </div>
+          <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
+        </div>
+      </header>
+
+
+      <main role="main">
+        <div class="page-layout">
+          <div class="page-layout__inner">
+
+            <div class="page-layout__breadcrumbs">
+              <ul class="breadcrumbs">
+                <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
+                <li class="breadcrumbs__item"><span>Контакты</span></li>
+              </ul>
+            </div>
+
+            <div class="page-layout__main">
+              <div class="page-main">
+                <h1 class="page-heading">Контакты</h1>
+                <div class="contact-map">
+                  <div class="contact-box">
+                    <div class="contact-box__item">г.Курск, ул. Малых, 180</div>
+                    <div class="contact-box__item">+7(4712) 31-19-19</div>
+                    <div class="contact-box__item">+7-910-313-21-93</div>
+                  </div>
+                  <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0cae43c4271938308b3fd6d56f48f345c1fdf66df636606c1fe87610e31bc70c&amp;width=100%25&amp;height=420&amp;lang=ru_RU&amp;scroll=false"></script>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+
+      <footer class="page-footer" role="contentinfo">
+        <div class="page-feedback">
+          <div class="page-feedback__inner">
+            <div class="page-feedback__header">
+              <h2 class="page-feedback__title">Остались вопросы?</h2>
+              <p class="page-feedback__caption">Для получения подробной информации звоните нам по тел.: <span>+7(4712) 31-19-19</span> или оставьте заявку</p>
+            </div>
+            <div class="page-feedback__body">
+              <form action="" class="form form--feedback">
+                <label class="field-feedback">
+                  <input class="field-feedback__input" type="text" placeholder="Имя" id="" name="">
+                </label>
+                <label class="field-feedback">
+                  <input class="field-feedback__input" type="text" placeholder="Телефон" id="" name="">
+                </label>
+                <div class="field-feedback">
+                  <button type="submit" class="btn field-feedback__btn btn--block">Оставить заявку</button>
+                </div>
+              </form>
+            </div>
+            <div class="page-feedback__footer">
+              <p>Оставляя заявку вы соглашаетесь на обработку персональных данных. <a href="#">Политика конфиденциальности</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="container page-footer__inner">
+          <a href="/" class="logo">
+            <img src="img/logo.png" alt="logo">
+          </a>
+          <nav class="main-nav" role="navigation">
+            <ul class="main-nav__list">
+              <li class="main-nav__item main-nav__item--active">
+                <a href="#" class="main-nav__link">
+                  О компании
+                </a>
+              </li>
+              <li class="main-nav__item main-nav__item--active">
+                <a href="#" class="main-nav__link">
+                  Каталог
+                </a>
+              </li>
+              <li class="main-nav__item main-nav__item--active">
+                <a href="#" class="main-nav__link">
+                  Оплата и доставка
+                </a>
+              </li>
+              <li class="main-nav__item main-nav__item--active">
+                <a href="#" class="main-nav__link">
+                  Статьи
+                </a>
+              </li>
+              <li class="main-nav__item main-nav__item--active">
+                <a href="#" class="main-nav__link">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="b-contacts">
+            <div class="b-contacts__item">
+              <svg class="b-contacts__icon" width="20" height="20">
+                <use xlink:href="img/sprite-svg.svg#icon-marker"></use>
+              </svg>
+              <span>г.Курск, ул. Малых, 180</span>
+            </div>
+            <div class="b-contacts__item">
+              <svg class="b-contacts__icon" width="20" height="20">
+                <use xlink:href="img/sprite-svg.svg#icon-phone"></use>
+              </svg>
+              <span>+7(4712) 31-19-19</span>
+            </div>
+          </div>
+          <div class="b-callback">
+            <button class="btn btn--main btn--main-lg" type="button" data-toggle="modal" data-target="#modal-call">Заказать звонок</button>
+          </div>
+        </div>
+        <div class="page-footer-copiryght">
+          <div class="container page-footer-copiryght__inner">
+            <span>Разработка сайта — <a href="http://www.2showbiz.ru/">Showbiz Studio</a></span>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
+  </div>
+
+  <div id="modal-call" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <a href="#" class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></a>
+          <h4 class="modal__title">Заказать звонок</h4>
+          <p class="modal__caption">Оставьте заявку и мы свяжемся с вами в ближайшее время!</p>
+        </div>
+        <div class="modal__body">
+          <form action="" class="form form--call">
+            <label class="field-text">
+              <input class="field-feedback__input" type="text" placeholder="Имя" id="" name="">
+            </label>
+            <label class="field-text">
+              <input class="field-feedback__input" type="text" placeholder="Телефон" id="" name="">
+            </label>
+            <div class="field-text">
+              <button type="submit" class="btn btn--main btn--block">Оставить заявку</button>
+            </div>
+            <div class="field-checkbox">
+              <label class="field-checkbox__name">
+                <input class="field-checkbox__input" type="checkbox" id="" name="" checked>
+                <span class="field-checkbox__name-text">Я принимаю условия передачи информации</span>
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+
+  <script src="js/script.min.js"></script>
+  <script src="js/global-script.js"></script>
+
+</body>
+</html>

@@ -3,13 +3,13 @@
 
 <head>
   <meta charset="utf-8">
-  <title>NTH start project</title>
+  <title>Мдизайн</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
 
-  <!-- <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png"> -->
-  <!-- <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png"> -->
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
   <link rel="shortcut icon" href="img/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,500,500i|Lora:400,400i&amp;subset=cyrillic" rel="stylesheet">
   <link href="css/style.min.css" rel="stylesheet" media="screen">
@@ -50,33 +50,33 @@
 
       <header class="page-header" role="banner">
         <div class="container page-header__inner">
-          <a href="/" class="logo">
+          <a href="index.html" class="logo">
             <img src="img/logo.png" alt="logo">
           </a>
           <nav id="main-nav" class="main-nav" role="navigation">
             <ul class="main-nav__list">
               <li class="main-nav__item">
-                <a href="#" class="main-nav__link">
+                <a href="page.html" class="main-nav__link">
                   О компании
                 </a>
               </li>
               <li class="main-nav__item main-nav__item--active">
-                <a href="#" class="main-nav__link">
+                <a href="page-catalog.html" class="main-nav__link">
                   Каталог
                 </a>
               </li>
               <li class="main-nav__item">
-                <a href="#" class="main-nav__link">
+                <a href="page.html" class="main-nav__link">
                   Оплата и доставка
                 </a>
               </li>
               <li class="main-nav__item">
-                <a href="#" class="main-nav__link">
+                <a href="page.html" class="main-nav__link">
                   Статьи
                 </a>
               </li>
               <li class="main-nav__item">
-                <a href="#" class="main-nav__link">
+                <a href="page-contacts.html" class="main-nav__link">
                   Контакты
                 </a>
               </li>
@@ -84,40 +84,80 @@
             <div class="main-nav__backdrop"></div>
           </nav>
           <div class="b-contacts">
-            <div class="b-contacts__item">г.Курск, ул. Малых, 180</div>
-            <div class="b-contacts__item">+7(4712) 31-19-19</div>
+            <div class="b-contacts__item">
+              <svg class="b-contacts__icon" width="20" height="20">
+                <use xlink:href="img/sprite-svg.svg#icon-marker"></use>
+              </svg>
+              <span>г.Курск, ул. Малых, 180</span>
+            </div>
+            <div class="b-contacts__item">
+              <svg class="b-contacts__icon" width="20" height="20">
+                <use xlink:href="img/sprite-svg.svg#icon-phone"></use>
+              </svg>
+              <span>+7(4712) 31-19-19</span>
+            </div>
           </div>
           <div class="b-callback">
-            <button class="btn btn--main">Заказать звонок</button>
+            <button class="btn btn--main btn--main-lg" type="button" data-toggle="modal" data-target="#modal-call">Заказать звонок</button>
           </div>
           <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
         </div>
       </header>
 
 
-      <!-- <div id="main-slider" class="slider-pro">
-        <div class="sp-slides">
-
-          <div class="sp-slide">
-            <img class="sp-image" src="../src/css/images/blank.gif" data-src="http://bqworks.com/slider-pro/images/image2_medium.jpg" data-retina="http://bqworks.com/slider-pro/images/image2_large.jpg" />
-            <div class="sp-layer sp-white sp-padding hide-medium-screen" data-width="450" data-horizontal="15%" data-vertical="22%" data-show-transition="left" data-show-delay="200" data-hide-transition="left" data-hide-delay="200">
-              <h4>Паяный витраж</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, voluptatibus. Enim laborum eum labore quae aspernatur quos non quaerat optio.</p>
-              <a class="btn" href="#">Узнать цену</a>
-            </div>
+      <div class="section-slider">
+        <div class="owl-carousel main-slider">
+          <div class="main-slider__slide" style="background-image:url('img/slide-01.jpg');">
+            <section class="container">
+              <div class="slide-panel">
+                <div class="slide-panel__title">Пьяный витраж</div>
+                <div class="slide-panel__body">
+                  <p>Это витраж, собранный из кусочков стекол в свинцовую
+                  оправу, запаянную в стыках. Стекла могут быть цветными
+                  и расписанными краской из окислов металлов, которая
+                  далее обжигается в специально устроенных печах.</p>
+                </div>
+                <div class="slide-panel__action">
+                  <a href="#" class="btn btn--main btn--main-lg">Узнать цену</a>
+                </div>
+              </div>
+            </section>
           </div>
-
-          <div class="sp-slide">
-            <img class="sp-image" src="../src/css/images/blank.gif" data-src="http://bqworks.com/slider-pro/images/image2_medium.jpg" data-retina="http://bqworks.com/slider-pro/images/image2_large.jpg" />
-            <div class="sp-layer sp-white sp-padding hide-medium-screen" data-width="450" data-horizontal="40" data-vertical="22%" data-show-transition="left" data-show-delay="200" data-hide-transition="left" data-hide-delay="200">
-              <h4>Паяный витраж</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, voluptatibus. Enim laborum eum labore quae aspernatur quos non quaerat optio.</p>
-              <a class="btn" href="#">Узнать цену</a>
-            </div>
+          <div class="main-slider__slide" style="background-image:url('img/slide-02.jpg');">
+            <section class="container">
+              <div class="slide-panel">
+                <div class="slide-panel__title">Пьяный витраж</div>
+                <div class="slide-panel__body">
+                  <p>Это витраж, собранный из кусочков стекол в свинцовую
+                  оправу, запаянную в стыках. Стекла могут быть цветными
+                  и расписанными краской из окислов металлов, которая
+                  далее обжигается в специально устроенных печах.</p>
+                </div>
+                <div class="slide-panel__action">
+                  <a href="#" class="btn btn--main btn--main-lg">Узнать цену</a>
+                </div>
+              </div>
+            </section>
           </div>
-
+          <div class="main-slider__slide" style="background-image:url('img/slide-03.jpg');">
+            <section class="container">
+              <div class="slide-panel">
+                <div class="slide-panel__title">Пьяный витраж</div>
+                <div class="slide-panel__body">
+                  <p>Это витраж, собранный из кусочков стекол в свинцовую
+                  оправу, запаянную в стыках. Стекла могут быть цветными
+                  и расписанными краской из окислов металлов, которая
+                  далее обжигается в специально устроенных печах.</p>
+                </div>
+                <div class="slide-panel__action">
+                  <a href="#" class="btn btn--main btn--main-lg">Узнать цену</a>
+                </div>
+              </div>
+            </section>
+          </div>
         </div>
-      </div> -->
+      </div>
+
       <main role="main">
         <section class="main-section">
           <div class="main-section__inner">
@@ -134,7 +174,7 @@
               <div class="main-catalog__item">
                 <div class="catalog-card">
                   <a href="#">
-                    <img src="http://lorempixel.com/735/435" width="735" height="435" alt="">
+                    <img src="http://placehold.it/735x435/cf1836/ecf0f1" width="735" height="435" alt="">
                     <div class="catalog-card__title">Витражи в интерьере</div>
                   </a>
                 </div>
@@ -150,7 +190,7 @@
               <div class="main-catalog__item">
                 <div class="catalog-card">
                   <a href="#">
-                    <img src="http://lorempixel.com/735/435" width="735" height="435" alt="">
+                    <img src="http://placehold.it/735x435/cf1836/ecf0f1" width="735" height="435" alt="">
                     <div class="catalog-card__title">Витражи в интерьере</div>
                   </a>
                 </div>
@@ -166,7 +206,7 @@
               <div class="main-catalog__item">
                 <div class="catalog-card">
                   <a href="#">
-                    <img src="http://lorempixel.com/735/435" width="735" height="435" alt="">
+                    <img src="http://placehold.it/735x435/cf1836/ecf0f1" width="735" height="435" alt="">
                     <div class="catalog-card__title">Фотоизображения для интерьера</div>
                   </a>
                 </div>
@@ -174,14 +214,14 @@
             </div>
           </div>
         </section>
-        <section class="main-section">
+        <section class="main-section" style="padding-top: 0;">
           <div class="main-section__inner">
             <h2 class="main-section__title"><span>Новинки</span></h2>
             <div class="main-new-product">
               <div class="product-card">
                 <div class="product-card__inner">
                   <div class="product-card__image">
-                    <img src="http://lorempixel.com/735/435" width="735" height="435" alt="">
+                    <img src="http://placehold.it/735x435/cf1836/ecf0f1" width="735" height="435" alt="">
                   </div>
                   <div class="product-card__body">
                     <h4 class="product-card__title">Название</h4>
@@ -195,7 +235,7 @@
               <div class="product-card">
                 <div class="product-card__inner">
                   <div class="product-card__image">
-                    <img src="http://lorempixel.com/735/435" width="735" height="435" alt="">
+                    <img src="http://placehold.it/735x435/cf1836/ecf0f1" width="735" height="435" alt="">
                   </div>
                   <div class="product-card__body">
                     <h4 class="product-card__title">Название</h4>
@@ -209,7 +249,7 @@
               <div class="product-card">
                 <div class="product-card__inner">
                   <div class="product-card__image">
-                    <img src="http://lorempixel.com/735/435" width="735" height="435" alt="">
+                    <img src="http://placehold.it/735x435/cf1836/ecf0f1" width="735" height="435" alt="">
                   </div>
                   <div class="product-card__body">
                     <h4 class="product-card__title">Название</h4>
@@ -223,7 +263,7 @@
               <div class="product-card">
                 <div class="product-card__inner">
                   <div class="product-card__image">
-                    <img src="http://lorempixel.com/735/435" width="735" height="435" alt="">
+                    <img src="http://placehold.it/735x435/cf1836/ecf0f1" width="735" height="435" alt="">
                   </div>
                   <div class="product-card__body">
                     <h4 class="product-card__title">Название</h4>
@@ -259,7 +299,7 @@
         <section class="main-section">
           <div class="main-section__inner">
             <h2 class="main-section__title"><span>Отзывы</span></h2>
-            <div id="review-carousel" class="owl-carousel">
+            <div id="review-carousel" class="owl-carousel review-carousel">
               <div class="review-card">
                 <div class="review-card__user">
                   <div class="review-card__user-image">
@@ -384,16 +424,26 @@
             </ul>
           </nav>
           <div class="b-contacts">
-            <div class="b-contacts__item">г.Курск, ул. Малых, 180</div>
-            <div class="b-contacts__item">+7(4712) 31-19-19</div>
+            <div class="b-contacts__item">
+              <svg class="b-contacts__icon" width="20" height="20">
+                <use xlink:href="img/sprite-svg.svg#icon-marker"></use>
+              </svg>
+              <span>г.Курск, ул. Малых, 180</span>
+            </div>
+            <div class="b-contacts__item">
+              <svg class="b-contacts__icon" width="20" height="20">
+                <use xlink:href="img/sprite-svg.svg#icon-phone"></use>
+              </svg>
+              <span>+7(4712) 31-19-19</span>
+            </div>
           </div>
           <div class="b-callback">
-            <button class="btn btn--main">Заказать звонок</button>
+            <button class="btn btn--main btn--main-lg" type="button" data-toggle="modal" data-target="#modal-call">Заказать звонок</button>
           </div>
         </div>
         <div class="page-footer-copiryght">
           <div class="container page-footer-copiryght__inner">
-            <span>Разработка сайта — <a href="#">Showbiz Studio</a></span>
+            <span>Разработка сайта — <a href="http://www.2showbiz.ru/">Showbiz Studio</a></span>
           </div>
         </div>
       </footer>
@@ -401,7 +451,43 @@
     </div>
 
   </div>
+
+  <div id="modal-call" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <a href="#" class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></a>
+          <h4 class="modal__title">Заказать звонок</h4>
+          <p class="modal__caption">Оставьте заявку и мы свяжемся с вами в ближайшее время!</p>
+        </div>
+        <div class="modal__body">
+          <form action="" class="form form--call">
+            <label class="field-text">
+              <input class="field-feedback__input" type="text" placeholder="Имя" id="" name="">
+            </label>
+            <label class="field-text">
+              <input class="field-feedback__input" type="text" placeholder="Телефон" id="" name="">
+            </label>
+            <div class="field-text">
+              <button type="submit" class="btn btn--main btn--block">Оставить заявку</button>
+            </div>
+            <div class="field-checkbox">
+              <label class="field-checkbox__name">
+                <input class="field-checkbox__input" type="checkbox" id="" name="" checked>
+                <span class="field-checkbox__name-text">Я принимаю условия передачи информации</span>
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+
   <script src="js/script.min.js"></script>
+  <script src="js/global-script.js"></script>
 
 </body>
 </html>
