@@ -42,11 +42,21 @@
       <div class="main-nav__backdrop"></div>
     </nav>
     <div class="b-contacts">
-      <div class="b-contacts__item">г.Курск, ул. Малых, 180</div>
-      <div class="b-contacts__item">+7(4712) 31-19-19</div>
+      <div class="b-contacts__item">
+        <svg class="b-contacts__icon" width="20" height="20">
+          <use xlink:href="img/sprite-svg.svg#icon-marker"></use>
+        </svg>
+        <span>г.Курск, ул. Малых, 180</span>
+      </div>
+      <div class="b-contacts__item">
+        <svg class="b-contacts__icon" width="20" height="20">
+          <use xlink:href="img/sprite-svg.svg#icon-phone"></use>
+        </svg>
+        <span>+7(4712) 31-19-19</span>
+      </div>
     </div>
     <div class="b-callback">
-      <button class="btn btn--main btn--main-lg">Заказать звонок</button>
+      <button class="btn btn--main btn--main-lg" type="button" data-toggle="modal" data-target="#modal-call">Заказать звонок</button>
     </div>
     <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
   </div>

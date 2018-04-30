@@ -95,5 +95,12 @@ $border-radius:               0;
     color: #fff;
     border-radius: 0;
     border: 1px solid #fff;
+
+    &:hover,
+    &:focus {
+      background: $color-main;
+      border-color: $color-main;
+      color: #fff;
+    }
   }
 }

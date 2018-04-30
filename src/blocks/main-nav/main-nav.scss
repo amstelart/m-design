@@ -104,7 +104,6 @@ $transition-time:             0.3s !default;
     &:focus {
       text-decoration: none;
       color: $color-main;
-      background-color: $gray-lightest;
     }
 
     @media (max-width: ($menu-desktop-width - 1)) {
@@ -182,7 +181,7 @@ $transition-time:             0.3s !default;
     @media (max-width: ($menu-desktop-width - 1)) {
       position: fixed;
       z-index: 1;
-      top: 80px;
+      top: 88px;
       left: 0;
       background: rgba(0,0,0,0.65);
       opacity: 0;

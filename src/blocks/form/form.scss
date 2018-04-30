@@ -38,6 +38,11 @@ $line-height:                 1.375em !default;
   &--feedback {
     @include row;
 
+    @media (max-width: ($screen-lg - 1)) {
+      max-width: 480px;
+      margin: auto;
+    }
+
     .field-feedback {
       @include col();
       @include col(lg, 4);

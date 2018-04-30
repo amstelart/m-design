@@ -73,10 +73,16 @@ $z-index-modal:               100 !default;
   &__title {
     margin-top: ($line-height / 2);
     margin-bottom: ($line-height / 2);
-    font-size: $font-size--h4;
+    font-family: $font-family;
+    font-size: $font-size--h1;
+    text-align: center;
     line-height: 1.4;
     font-weight: 700;
     color: currentColor;
+  }
+
+  &__caption {
+    text-align: center;
   }
 
   &__close {
@@ -86,12 +92,16 @@ $z-index-modal:               100 !default;
   }
 
   &__body {
-    padding: 0 10px;
+    padding: 0 10px 40px 10px;
     flex-grow: 1;
+
+    @media (min-width: $screen-lg) {
+      padding: 0 40px 40px 40px;
+    }
   }
 
   &__footer {
-    padding: 10px;
+    padding: 10px 10px 30px 10px;
     flex-shrink: 0;
   }
 
