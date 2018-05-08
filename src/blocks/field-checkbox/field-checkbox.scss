@@ -56,6 +56,11 @@ $line-height:                 1.375em !default;
 
     // свой чекбокс без картинок
 
+    a {
+      position: relative;
+      z-index: 100;
+    }
+
     &:before {
       content: '';
       position: absolute;
