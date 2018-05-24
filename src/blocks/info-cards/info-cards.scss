@@ -1,0 +1,13 @@
+// В этом файле должны быть стили для БЭМ-блока info-cards, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.info-cards {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__item {
+    margin-bottom: 20px;
+  }
+
+}
